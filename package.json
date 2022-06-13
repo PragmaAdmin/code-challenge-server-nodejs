@@ -2,17 +2,24 @@
   "name": "code-challenge-server-nodejs",
   "version": "1.0.0",
   "description": "Pragmateam code challenge",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "nodemon src/index.js",
+    "test": "jest --watchAll --testPathPattern=./test",
+    "test-coverage": "jest --watchAll --testPathPattern=./test --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1",
-    "prettier": "^2.2.1"
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.4.0"
   }
 }
