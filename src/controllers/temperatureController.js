@@ -5,22 +5,18 @@ const getAllTemperatures = (req, res) => {
         try {
             let promises = [];
             let result = [];
-
             let currentPage = 1;
-
             while (currentPage <= 6) {
                 promises.push(axios.get(
                     `https://temperature-sensor-service.herokuapp.com/sensor/${currentPage}`,
                 ));
                 currentPage++;
             }
-
             const data = await Promise.all(promises);
             data.forEach(({data}) => {
                 result.push(data);
             });
-            res.send(
-                result);
+            res.send(result);
         } catch (error) {
             console.error(error);
         }
