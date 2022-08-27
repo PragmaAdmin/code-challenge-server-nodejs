@@ -4,7 +4,8 @@
   "description": "Pragmateam code challenge",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest --config ./jest.config.json"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jest": "^29.0.1",
     "node-fetch": "^2.6.1",
     "prettier": "^2.2.1"
   }

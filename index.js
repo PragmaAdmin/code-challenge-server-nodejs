@@ -18,3 +18,4 @@ app.get('/temperature/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`SensorTech server at http://localhost:${port}`);
 });
+
