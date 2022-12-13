@@ -9,7 +9,7 @@ app.use(cors());
 
 app.get('/temperature/:id', (req, res) => {
   fetch(
-    `https://temperature-sensor-service.herokuapp.com/sensor/${req.params.id}`
+    `https://hasydbj5c4gpa2oozfpjpc677a0hxuob.lambda-url.ap-southeast-2.on.aws/sensor/${req.params.id}`
   )
     .then((response) => response.json())
     .then((response) => res.send(response));
